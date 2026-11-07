@@ -51,4 +51,12 @@ if (fs.existsSync(maintenanceHtml)) {
   console.log('✓ Copied maintenance.html -> dist/maintenance.html');
 }
 
+// 5. Ensure product-images is present in dist/product-images
+const distProductImages = path.join(distDir, 'product-images');
+const sourceProductImages = path.join(rootDir, 'public', 'product-images');
+if (!fs.existsSync(distProductImages) && fs.existsSync(sourceProductImages)) {
+  fs.cpSync(sourceProductImages, distProductImages, { recursive: true });
+  console.log('✓ Copied public/product-images -> dist/product-images');
+}
+
 console.log('\n🎉 Complete! The "dist" folder is now 100% packaged with Frontend, PHP Backend, and .env ready for Hostinger upload.\n');

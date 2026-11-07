@@ -81,9 +81,20 @@ def upload_directory(ftp, local_dir, remote_base, dry_run=False):
 
 def main():
     dry_run = "--dry-run" in sys.argv
+    only_subpath = None
+    for arg in sys.argv[1:]:
+        if arg.startswith("--only="):
+            only_subpath = arg.split("=", 1)[1].strip("/")
 
     if not DIST_DIR.exists():
         print(f"Error: {DIST_DIR} not found. Please run 'npm run build' first.")
+        sys.exit(1)
+
+    target_local_dir = DIST_DIR / only_subpath if only_subpath else DIST_DIR
+    target_remote_dir = f"{REMOTE_TARGET_DIR}/{only_subpath}" if only_subpath else REMOTE_TARGET_DIR
+
+    if not target_local_dir.exists():
+        print(f"Error: {target_local_dir} not found.")
         sys.exit(1)
 
     host, port, user, password = load_ftp_credentials()
@@ -95,9 +106,9 @@ def main():
     print("Logged in successfully!")
 
     try:
-        ensure_remote_dir(ftp, REMOTE_TARGET_DIR)
-        print(f"Target directory verified: {REMOTE_TARGET_DIR}")
-        upload_directory(ftp, DIST_DIR, REMOTE_TARGET_DIR, dry_run=dry_run)
+        ensure_remote_dir(ftp, target_remote_dir)
+        print(f"Target directory verified: {target_remote_dir}")
+        upload_directory(ftp, target_local_dir, target_remote_dir, dry_run=dry_run)
     finally:
         try:
             ftp.quit()
