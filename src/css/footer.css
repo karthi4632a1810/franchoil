@@ -1,0 +1,109 @@
+.social-media-icon-wrapper {
+    color: color-mix(in srgb, var(--t-c-d) 40%, white);
+    font-weight: 500;
+}
+
+.social-media-icon {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.223);
+}
+
+.social-media-icon:hover {
+    background-color: var(--p-c);
+}
+
+footer {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.223);
+}
+
+.footer-social-link {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.348);
+}
+
+
+footer p,
+footer .footer-center-bar.grid a {
+    color: color-mix(in srgb, var(--t-c-d) 60%, white);
+}
+
+footer .footer-center-bar.grid a {
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.footer-links .footer-heading::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 4px;
+    border-radius: 100vh;
+    background-color: var(--p-c);
+}
+
+.footer-map-wrapper {
+    border: 10px solid var(--bg-w);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.223);
+    width: 100%;
+    height: 250px;
+    background-color: var(--p-c);
+    border-radius: 10px;
+}
+
+.footer-top-bar {
+    position: absolute;
+    /* background-image: linear-gradient(to right, #007E3C, #5DAD83); */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.218);
+    top: 0;
+    transform: translateY(-50%);
+}
+
+.footer-top-bar img {
+    width: 50px;
+}
+
+footer .grid .footer-links a:hover {
+    transform: translateX(10px);
+    color: var(--t-p-c);
+}
+
+.login-popup-wrapper {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(.2);
+    animation: loginAlert 30s infinite linear;
+    opacity: 0;
+    box-shadow: 0px 0px 100vh 100vw rgba(0, 0, 0, 0.351);
+    border-radius: 10px;
+    z-index: 99999999999999999999999999999999999;
+}
+
+@keyframes loginAlert {
+
+    0%,
+    75% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(.2);
+    }
+
+    76% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+
+    77%,
+    98% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(.2);
+    }
+}
+
+@media (width < 400px) {
+    .footer-top-bar img {
+        width: 28px;
+    }
+}

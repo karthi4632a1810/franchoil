@@ -1,0 +1,234 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --background: 40 33% 98%;
+        --foreground: 30 10% 15%;
+
+        --card: 40 40% 99%;
+        --card-foreground: 30 10% 15%;
+
+        --popover: 40 40% 99%;
+        --popover-foreground: 30 10% 15%;
+
+        --primary: 43 74% 49%;
+        --primary-foreground: 40 40% 99%;
+
+        --secondary: 40 30% 95%;
+        --secondary-foreground: 30 10% 25%;
+
+        --muted: 40 20% 94%;
+        --muted-foreground: 30 10% 45%;
+
+        --accent: 43 74% 49%;
+        --accent-foreground: 40 40% 99%;
+
+        --destructive: 0 84% 60%;
+        --destructive-foreground: 0 0% 100%;
+
+        --border: 40 20% 88%;
+        --input: 40 20% 88%;
+        --ring: 43 74% 49%;
+
+        --radius: 0.75rem;
+
+        /* Custom tokens */
+        --green-500: 142 76% 36%;
+        --green-500-foreground: 0 0% 100%;
+
+        --warning: 38 92% 50%;
+        --warning-foreground: 0 0% 100%;
+
+        /* Gradients */
+        --gradient-primary: linear-gradient(135deg, hsl(43, 74%, 49%) 0%, hsl(38, 80%, 55%) 100%);
+        --gradient-card: linear-gradient(180deg, hsl(40, 40%, 99%) 0%, hsl(40, 30%, 97%) 100%);
+        --gradient-hero: linear-gradient(135deg, hsl(40, 33%, 98%) 0%, hsl(40, 40%, 95%) 100%);
+
+        /* Shadows */
+        --shadow-sm: 0 1px 2px 0 hsl(30 10% 15% / 0.03);
+        --shadow-md: 0 4px 6px -1px hsl(30 10% 15% / 0.05), 0 2px 4px -2px hsl(30 10% 15% / 0.05);
+        --shadow-lg: 0 10px 15px -3px hsl(30 10% 15% / 0.08), 0 4px 6px -4px hsl(30 10% 15% / 0.05);
+        --shadow-xl: 0 20px 25px -5px hsl(30 10% 15% / 0.1), 0 8px 10px -6px hsl(30 10% 15% / 0.1);
+        --shadow-glow: 0 0 20px hsl(43 74% 49% / 0.3);
+
+        --sidebar-background: 0 0% 98%;
+        --sidebar-foreground: 240 5.3% 26.1%;
+        --sidebar-primary: 240 5.9% 10%;
+        --sidebar-primary-foreground: 0 0% 98%;
+        --sidebar-accent: 240 4.8% 95.9%;
+        --sidebar-accent-foreground: 240 5.9% 10%;
+        --sidebar-border: 220 13% 91%;
+        --sidebar-ring: 217.2 91.2% 59.8%;
+    }
+
+    .dark {
+        --background: 30 10% 10%;
+        --foreground: 40 30% 95%;
+
+        --card: 30 10% 12%;
+        --card-foreground: 40 30% 95%;
+
+        --popover: 30 10% 12%;
+        --popover-foreground: 40 30% 95%;
+
+        --primary: 43 74% 55%;
+        --primary-foreground: 30 10% 10%;
+
+        --secondary: 30 10% 18%;
+        --secondary-foreground: 40 30% 90%;
+
+        --muted: 30 10% 20%;
+        --muted-foreground: 40 20% 60%;
+
+        --accent: 43 74% 55%;
+        --accent-foreground: 30 10% 10%;
+
+        --destructive: 0 62% 50%;
+        --destructive-foreground: 0 0% 100%;
+
+        --border: 30 10% 20%;
+        --input: 30 10% 20%;
+        --ring: 43 74% 55%;
+
+        --sidebar-background: 240 5.9% 10%;
+        --sidebar-foreground: 240 4.8% 95.9%;
+        --sidebar-primary: 224.3 76.3% 48%;
+        --sidebar-primary-foreground: 0 0% 100%;
+        --sidebar-accent: 240 3.7% 15.9%;
+        --sidebar-accent-foreground: 240 4.8% 95.9%;
+        --sidebar-border: 240 3.7% 15.9%;
+        --sidebar-ring: 217.2 91.2% 59.8%;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+
+    body {
+        @apply bg-background text-foreground font-sans antialiased;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-display;
+    }
+}
+
+@layer components {
+    .checkout-card {
+        @apply bg-card rounded-2xl border border-border p-6 shadow-md;
+        background: var(--gradient-card);
+    }
+
+    .checkout-input {
+        @apply w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all duration-200;
+    }
+
+    .checkout-label {
+        @apply block text-sm font-medium text-foreground mb-2;
+    }
+
+    .payment-option {
+        @apply flex items-center gap-3 p-4 rounded-xl border-2 border-border bg-card cursor-pointer transition-all duration-200 hover:border-primary/50 hover:shadow-md;
+    }
+
+    .payment-option.selected {
+        @apply border-primary bg-primary/5 shadow-md;
+    }
+
+    .cart-item-card {
+        @apply flex gap-4 p-4 rounded-xl bg-secondary/50 transition-all duration-200 hover:bg-secondary;
+    }
+
+    .trust-badge {
+        @apply inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-green-500/10 text-green-500 text-xs font-medium;
+    }
+
+    .section-title {
+        @apply text-lg font-display font-semibold text-foreground mb-4 flex items-center gap-2;
+    }
+
+    .btn-primary {
+        @apply w-full py-4 px-6 rounded-xl font-semibold text-primary-foreground transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed;
+        background: var(--gradient-primary);
+        box-shadow: var(--shadow-glow);
+    }
+
+    .btn-primary:not(:disabled):hover {
+        transform: translateY(-1px);
+        box-shadow: 0 0 30px hsl(43 74% 49% / 0.4);
+    }
+
+    .btn-primary:not(:disabled):active {
+        transform: translateY(0);
+    }
+
+    .quantity-btn {
+        @apply w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-200;
+    }
+
+    .quantity-btn-minus {
+        @apply bg-secondary text-foreground hover:bg-secondary/80;
+    }
+
+    .quantity-btn-plus {
+        @apply bg-primary text-primary-foreground hover:opacity-90;
+    }
+
+    .quantity-btn-delete {
+        @apply bg-destructive/10 text-destructive hover:bg-destructive/20;
+    }
+}
+
+@layer utilities {
+    .animate-fade-in {
+        animation: fadeIn 0.4s ease-out forwards;
+    }
+
+    .animate-slide-up {
+        animation: slideUp 0.4s ease-out forwards;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideUp {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+.payment-method {
+    width: 50px;
+    aspect-ratio: 2.1;
+    box-shadow: 0px 0px 10px #00000016;
+    background-color: #ffffff;
+    border-radius: 5px;
+    background-image: var(--pay-img);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}

@@ -1,0 +1,45 @@
+{
+    "data": {
+        "order": {
+            "orderid": "order1077168333o4hyExONYcG6F0gpQXT3uE0b",
+            "orderamount": 1,
+            "ordercurrency": "INR",
+            "ordertags": null
+        },
+        "payment": {
+            "cfpaymentid": "4375353882",
+            "paymentstatus": "SUCCESS",
+            "paymentamount": 1,
+            "paymentcurrency": "INR",
+            "paymentmessage": "00::Transaction Success",
+            "paymenttime": "2025-09-22T20:59:00+05:30",
+            "bankreference": "526520794727",
+            "authid": null,
+            "paymentmethod": {
+                "upi": {
+                    "channel": null,
+                    "upiid": "9962460782@axl"
+                }
+            },
+            "paymentgroup": "upi"
+        },
+        "customerdetails": {
+            "customername": "test",
+            "customerid": "cust1758554926323",
+            "customeremail": "test@example.com",
+            "customerphone": "9876543210"
+        },
+        "paymentgatewaydetails": {
+            "gatewayname": "CASHFREE",
+            "gatewayorderid": null,
+            "gatewaypaymentid": null,
+            "gatewaystatuscode": null,
+            "gatewayorderreferenceid": null,
+            "gatewaysettlement": "CASHFREE",
+            "gatewayreferencename": null
+        },
+        "paymentoffers": null
+    },
+    "eventtime": "2025-09-22T20:59:21+05:30",
+    "type": "PAYMENTSUCCESSWEBHOOK"
+}

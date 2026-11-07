@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Server Maintenance</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #22c55e;
+      --border: #1f2937;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      min-height: 100%;
+      font-family: Arial, Helvetica, sans-serif;
+      background: radial-gradient(1200px 600px at 80% -20%, #1d4ed8 0%, var(--bg) 45%);
+      color: var(--text);
+    }
+
+    .wrap {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 680px;
+      background: linear-gradient(180deg, rgba(17, 24, 39, 0.98), rgba(17, 24, 39, 0.92));
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #052e16;
+      background: var(--accent);
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: 30px;
+      line-height: 1.2;
+    }
+
+    p {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .info {
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px dashed #374151;
+    }
+
+    .phone {
+      display: inline-block;
+      margin-top: 6px;
+      font-size: 20px;
+      color: #86efac;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .small {
+      margin-top: 16px;
+      font-size: 13px;
+      color: #6b7280;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="card">
+      <span class="badge">Scheduled Update</span>
+      <h1>Server Under Maintenance</h1>
+      <p>We are currently performing a system update to improve speed, checkout reliability, and order processing.</p>
+      <p>Please check back in a short while. Thank you for your patience.</p>
+
+      <div class="info">
+        <p><strong>Need immediate help?</strong><br>For further details, please call:</p>
+        <a class="phone" href="tel:+919841854321">+91 98418 54321</a>
+      </div>
+
+      <p class="small">If you are the site owner and have maintenance access, use your maintenance cookie to continue.</p>
+    </section>
+  </main>
+</body>
+</html>

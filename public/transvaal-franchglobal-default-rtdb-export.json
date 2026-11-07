@@ -1,0 +1,21 @@
+{
+  "public": {
+    "videos": [
+      {
+        "code": "franch_oil_1",
+        "name": "Real Stories, Real Relief | Franch Oil NH PLUS",
+        "url": "https://www.youtube.com/embed/jB3KL-Gr8iU"
+      },
+      {
+        "code": "franch_oil_2",
+        "name": "Natural Wellness Oil Review - Joint Support Journey",
+        "url": "https://www.youtube.com/embed/u1iOWT9Uj7c"
+      },
+      {
+        "code": "omega_3",
+        "name": "Omega 3 - 100% Veg Video",
+        "url": "https://www.youtube.com/embed/GIhk-jP5Uv4"
+      }
+    ]
+  }
+}

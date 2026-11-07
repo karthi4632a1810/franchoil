@@ -1,0 +1,58 @@
+{
+    "id": "8Xk5iBbhWQhK8oOgOpgc",
+    "userEmail": "jiokarthikeyan18@gmail.com",
+    "userName": "BAND APPS",
+    "total": 780,
+    "invoice": {
+        "receiverDetails": {
+            "name": "BAND APPS",
+            "address": "NO 20/51 ROYAL BUILDERS FLAT soorapan ",
+            "pincode": "600005",
+            "contact": "08778155671",
+            "city": "chennai",
+            "state": "tamilnadu"
+        },
+        "invoiceDate": "14/09/2025",
+        "amountInWords": "Seven Hundred Eighty Rupees Only",
+        "totalAmount": 780,
+        "invoiceNo": "FM2197133249"
+    },
+    "createdAt": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1757836318,
+        "nanoseconds": 707000000
+    },
+    "items": [
+        {
+            "imageURL": "https://firebasestorage.googleapis.com/v0/b/transvaal-franchglobal.firebasestorage.app/o/products%2Fgallery%2Fomega-3%2F1756653604777-d732f5f3-08fa-4029-86fa-9389146bb517.jpg?alt=media&token=2e07a92c-380a-4e68-ad6b-b8603a820e02",
+            "title": "OG-3 Veg ",
+            "qty": 1,
+            "productId": "asnVTJUiAq9H8xilOFHu",
+            "itemCode": "omega-3",
+            "price": 360,
+            "hsn": "30039011"
+        },
+        {
+            "productId": "60TbIHdbSiArXkExKiUJ",
+            "price": 210,
+            "hsn": "30039011",
+            "qty": 2,
+            "title": "Franch Oil NH* Plus",
+            "itemCode": "franch-oil-nh-plus",
+            "imageURL": "https://firebasestorage.googleapis.com/v0/b/transvaal-franchglobal.firebasestorage.app/o/products%2Fgallery%2Ffranch-oil-nh-plus%2F1757242154866-p-1.jpg?alt=media&token=cb266fad-fc40-4c00-ba8f-146653643c24"
+        }
+    ],
+    "address": {
+        "landmark": "SOORAPAN STR",
+        "country": "India",
+        "street": "soorapan ",
+        "state": "tamilnadu",
+        "line2": "",
+        "pincode": "600005",
+        "line1": "NO 20/51 ROYAL BUILDERS FLAT",
+        "city": "chennai"
+    },
+    "userPhone": "08778155671",
+    "userId": "wFGvERQjipVFTs11aIvKRNzI0ME3",
+    "status": "success"
+}

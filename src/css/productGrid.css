@@ -1,0 +1,430 @@
+/* Product grid cards — conversion-focused, Franch theme */
+.franch-product-card {
+  font-size: 16px;
+  position: relative;
+  background: linear-gradient(180deg, #ffffff 0%, #f9fdfb 100%);
+  border-radius: 12px;
+  border: 1px solid color-mix(in srgb, var(--p-c) 12%, #e8e8e8);
+  box-shadow: 0 4px 14px color-mix(in srgb, var(--t-c-d) 8%, transparent);
+  padding: 0.625rem;
+  display: flex;
+  flex-direction: column;
+  height: 100% !important;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.franch-product-card:hover {
+  border-color: color-mix(in srgb, var(--p-c) 45%, transparent);
+  box-shadow: 0 12px 28px color-mix(in srgb, var(--p-c) 22%, transparent);
+}
+
+@media (min-width: 768px) {
+  .franch-product-card {
+    padding: 0.75rem;
+  }
+}
+
+.franch-product-card .products-content-wrapper {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  margin-top: 0.5rem;
+  padding: 0 0.125rem;
+  font-family: Poppins, sans-serif;
+}
+
+.franch-product-card .product-card-body {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.franch-product-card .tag-and-ratings {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.franch-product-card .product-card-copy {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  margin-top: 0.35rem;
+  min-height: 0;
+}
+
+.franch-product-card .p-pricing-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-top: auto;
+  padding-top: 0.75rem;
+}
+
+.franch-product-card .p-price-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem 0.5rem;
+}
+
+.franch-product-card .p-perks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+/* Home + related products: row height = tallest card */
+.product-section-grid {
+  align-items: stretch;
+}
+
+.product-section-grid .product-grid-cell {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+}
+
+.product-section-grid .product-grid-cell > .franch-product-card {
+  flex: 1 1 auto;
+  width: 100%;
+  min-height: 100%;
+}
+
+
+
+/* Discount ribbon — on image area */
+.franch-product-card .discount-offer-wrapper {
+ right: -3%;
+}
+.franch-product-card .discount-offer-wrapper .discount-offer-1 {
+  position: absolute;
+  background-color: var(--p-c);
+  width: 20px;
+  aspect-ratio: 3;
+  right: 0;
+  top: 0;
+  transform: translate(2px, 36px) rotate(-60deg);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.franch-product-card .discount-offer-wrapper .discount-offer {
+  position: absolute;
+  width: max-content;
+  border-radius: 6px 6px 0 6px;
+  background: linear-gradient(135deg, var(--p-c), color-mix(in srgb, var(--p-c) 75%, #125700));
+  box-shadow: 0 4px 10px color-mix(in srgb, var(--p-c) 40%, transparent);
+  z-index: 30;
+  font-size: 0.7rem;
+  right: 0;
+  top: 0;
+  letter-spacing: 0.06em;
+  padding: 4px 8px;
+  transform: translate(0, 8px);
+  color: var(--t-c-l);
+  font-weight: 700;
+  pointer-events: none;
+}
+
+/* Image area */
+.franch-product-card .products-image-wrapper {
+  flex-shrink: 0;
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--p-c) 8%, transparent);
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+  background: linear-gradient(145deg, #f4faf7 0%, #eef5f1 50%, #f8f8f8 100%);
+}
+
+.franch-product-card .product-badge {
+  position: absolute;
+  z-index: 15;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  border-radius: 100vh;
+  padding: 4px 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  line-height: 1;
+}
+
+.franch-product-card .product-badge--stock {
+  left: 8px;
+  top: 8px;
+  background: color-mix(in srgb, var(--p-c) 12%, white);
+  color: var(--p-c);
+  border: 1px solid color-mix(in srgb, var(--p-c) 25%, transparent);
+}
+
+.franch-product-card .product-badge--gift {
+  left: 8px;
+  bottom: 8px;
+  background: linear-gradient(135deg, #fff5f5, #fff9e6);
+  color: #9f1239;
+  border: 1px solid #fecdd3;
+  box-shadow: 0 2px 8px rgba(190, 18, 60, 0.12);
+}
+
+.franch-product-card .products-image {
+  width: 100%;
+  aspect-ratio: 1.07;
+  overflow: hidden;
+  display: block;
+  position: relative;
+}
+
+.franch-product-card .products-image img:first-child {
+  opacity: 1;
+  transition: opacity 1s, transform 1s;
+}
+
+.franch-product-card .products-image img:nth-child(2) {
+  transform: translateX(100%);
+  transition: transform 0.45s ease;
+}
+
+.franch-product-card:hover .products-image img:first-child {
+  opacity: 0;
+  transform: scale(1.08);
+}
+
+.franch-product-card:hover .products-image img:nth-child(2) {
+  transform: translateX(0);
+}
+
+.franch-product-card .settings-wrapper {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  z-index: 20;
+}
+
+.franch-product-card .settings {
+  width: 2.1rem;
+  height: 2.1rem;
+  background-color: var(--bg-w);
+  border-radius: 100vh;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  transform: translateX(200%);
+  transition: 0.35s ease;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.franch-product-card .settings:hover {
+  background-color: var(--p-c);
+}
+
+.franch-product-card:hover .settings-wrapper .settings {
+  animation: franch-product-settings 0.4s var(--delay) forwards;
+}
+
+@keyframes franch-product-settings {
+  0% {
+    transform: translateX(200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Content */
+.franch-product-card .tag-and-ratings .p-tag {
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  color: var(--p-c);
+  margin: 0;
+  text-decoration: none;
+}
+
+.franch-product-card .tag-and-ratings .p-ratings {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  flex-shrink: 0;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #1e1e1e;
+  background: #fffbeb;
+  padding: 2px 6px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.franch-product-card .p-title {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.3;
+  margin: 0;
+  text-decoration: none;
+}
+
+.franch-product-card .p-subtitle {
+  font-size: 0.75rem;
+  color: #666;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.3;
+  text-decoration: none;
+}
+
+.franch-product-card .p-price {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--p-c);
+  line-height: 1;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.franch-product-card .p-mrp {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #999;
+  text-decoration: line-through;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+
+.franch-product-card .p-discount-pill {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--p-c);
+  background: color-mix(in srgb, var(--p-c) 12%, white);
+  border: 1px solid color-mix(in srgb, var(--p-c) 25%, transparent);
+  padding: 2px 6px;
+  border-radius: 4px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.franch-product-card .p-perk {
+  font-size: 0.65rem;
+  font-weight: 600;
+  display: inline-flex;
+  gap: 0.2rem;
+  padding: 3px 7px;
+  border-radius: 4px;
+  line-height: 1.2;
+}
+
+.franch-product-card .p-perk--gift {
+  background: color-mix(in srgb, #be123c 8%, white);
+  color: #9f1239;
+  border: 1px solid #fecdd3;
+}
+
+.franch-product-card .p-perk--ship {
+  background: color-mix(in srgb, var(--p-c) 10%, white);
+  color: var(--p-c);
+  border: 1px solid color-mix(in srgb, var(--p-c) 20%, transparent);
+}
+
+/* CTA sits directly under price/perks (product page layout) */
+.franch-product-card .product-btn-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.625rem;
+  margin-top: 0.5rem;
+  padding-top: 0;
+  flex-shrink: 0;
+}
+
+.franch-product-card .product-buy-now {
+  flex: 1;
+  background: linear-gradient(135deg, var(--p-c), color-mix(in srgb, var(--p-c) 85%, #125700));
+  color: var(--t-c-l);
+  border-radius: 100px;
+  padding: 10px 16px;
+  box-shadow: 0 4px 14px color-mix(in srgb, var(--p-c) 40%, transparent);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.franch-product-card .product-buy-now:hover {
+  filter: brightness(1.06);
+  box-shadow: 0 6px 18px color-mix(in srgb, var(--p-c) 50%, transparent);
+  transform: scale(1.02);
+}
+
+.franch-product-card .product-cart-btn {
+  width: 42px;
+  height: 42px;
+  border: 2px solid color-mix(in srgb, var(--p-c) 25%, transparent);
+  border-radius: 100vh;
+  background-color: var(--bg-w);
+  box-shadow: 0 3px 10px color-mix(in srgb, var(--p-c) 25%, transparent);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.franch-product-card .product-cart-btn:hover {
+  background-color: var(--p-c);
+  border-color: var(--p-c);
+  transform: scale(1.05);
+}
+
+.franch-product-card .product-cart-btn:hover .mask-item {
+  --m-bg: var(--t-c-l);
+}
+
+.franch-product-zoom-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999999;
+  cursor: zoom-out;
+  backdrop-filter: blur(4px);
+}
+
+.franch-product-zoom-backdrop img {
+  width: 80%;
+  max-width: 600px;
+  cursor: default;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 575px) {
+  .franch-product-card {
+    font-size: 14px;
+  }
+
+  .franch-product-card .settings {
+    transform: translateX(0);
+  }
+
+  .franch-product-card:hover {
+    transform: translateY(-3px);
+  }
+}

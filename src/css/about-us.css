@@ -1,0 +1,7 @@
+.about-image {
+    background-image: url(/images/about-us/about-us.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 400px;
+}

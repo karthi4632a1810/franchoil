@@ -1,0 +1,12 @@
+RAZORPAY_KEY_ID=rzp_live_RxNRBCo2yYi6cL
+RAZORPAY_KEY_SECRET=hhraTAJVoa0LTLNhDspWtQXz
+RAZORPAY_WEBHOOK_SECRET=rzp_webhook_super_secret_123
+
+# ── Meta Conversions API ──────────────────────────────────────────
+# Get from: Meta Business Manager → System Users → Generate Token
+# Grant: ads_management, pixel permissions
+META_ACCESS_TOKEN=PASTE_YOUR_META_SYSTEM_USER_TOKEN_HERE
+
+# Optional: Set this to your test event code while testing in Meta Events Manager
+# Remove or leave blank for production
+META_TEST_EVENT_CODE=

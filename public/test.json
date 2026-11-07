@@ -1,0 +1,43 @@
+{
+    "success": true,
+    "order_id": "order_10777775322T2aPEJ3H6zWxGUJlJTFhuKrz",
+    "response": {
+        "cart_details": null,
+        "cf_order_id": "2196423934",
+        "created_at": "2025-08-31T10:47:41+05:30",
+        "customer_details": {
+            "customer_id": "cust_1756617458951",
+            "customer_name": "Test User",
+            "customer_email": "example@gmail.com",
+            "customer_phone": "9999999999",
+            "customer_uid": null
+        },
+        "entity": "order",
+        "order_amount": 1,
+        "order_currency": "INR",
+        "order_expiry_time": "2025-09-30T10:47:41+05:30",
+        "order_id": "order_10777775322T2aPEJ3H6zWxGUJlJTFhuKrz",
+        "order_meta": {
+            "notify_url": null,
+            "payment_methods": null,
+            "payment_methods_filters": null,
+            "return_url": "https://transvaal-franchglobal.web.app/return"
+        },
+        "order_note": "Test order",
+        "order_splits": [],
+        "order_status": "ACTIVE",
+        "order_tags": null,
+        "payment_session_id": "session_UBYrg_Df30x67Jo6EkhLhg1eXwBM0Pfebe7QYXoIAjq7L3ORxfb86k5lUc3diaQkqo0w9_cWY9PaFojh7jqNAHDs_WMp-V4C6h-TLu_P1tSIxeocmTOGi3ABWMvdoApaymentpayment",
+        "products": {
+            "one_click_checkout": {
+                "enabled": false,
+                "conditions": []
+            },
+            "verify_pay": {
+                "enabled": false,
+                "conditions": []
+            }
+        },
+        "terminal_data": null
+    }
+}

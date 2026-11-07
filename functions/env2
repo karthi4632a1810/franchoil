@@ -1,0 +1,16 @@
+#Domain
+VITE_SITE_URL=http://localhost:5173
+VITE_ADMIN_EMAIL=jiokarthikeyan18@gmail.com,e18ca021@gmail.com,ecom@franchglobal.com,transvaalinfotechpvtltd@gmail.com,ecom1@franchglobal.com,ecom2@franchglobal.com,ecom1@franchglobal.com
+VITE_FIREBASE_SERVERLESS_URL=abcdefght
+# fireebase
+VITE_FIREBASE_API_KEY=AIzaSyCmEsYEBkwVpvrc3EsCff2Lb5iYclJxeac
+VITE_FIREBASE_AUTH_DOMAIN=transvaal-franchglobal.firebaseapp.com
+VITE_FIREBASE_DATABASE_URL=https://transvaal-franchglobal-default-rtdb.asia-southeast1.firebasedatabase.app
+VITE_FIREBASE_PROJECT_ID=transvaal-franchglobal
+VITE_FIREBASE_STORAGE_BUCKET=transvaal-franchglobal.firebasestorage.app
+VITE_FIREBASE_MESSAGING_SENDER_ID=784730963872
+VITE_FIREBASE_APP_ID=1:784730963872:web:22e8f37628991a5b9f6ec5
+VITE_FIREBASE_MEASUREMENT_ID=G-9NK16XRCPR
+#Telegram
+VITE_TELEGRAM_TOKEN=8430059272:AAGsb0ZkDrWbSWlRpP9MKUGYX7nFTTbO9hs
+VITE_GROUP_ID=-1003053642016

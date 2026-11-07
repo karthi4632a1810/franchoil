@@ -1,0 +1,11 @@
+[
+  {
+    "origin": [
+      "http://localhost:5173",
+      "https://franchglobal.com"
+    ],
+    "method": ["GET", "HEAD", "OPTIONS"],
+    "responseHeader": ["Content-Type"],
+    "maxAgeSeconds": 3600
+  }
+]

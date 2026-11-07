@@ -1,0 +1,46 @@
+[
+    {
+        "title": "Franch Oil NH* Plus - Ayurvedic Multipurpose Pain Relief & Skin Care Oil (100ml) | Joint Pain, Muscle Relief, Healing Oil",
+        "price": 210,
+        "sku": "NHPO-100",
+        "stock": 0,
+        "category": "Wellness",
+        "packSize": "100 ml",
+        "imageURL": "",
+        "active": true,
+        "description": "Ayurvedic multipurpose oil for joint pain relief and topical first-aid uses (burns, wounds, cracked lips, stretch marks, menstrual pain, muscular pain)."
+    },
+    {
+        "title": "OG-3 Veg  - Ayurvedic Proprietary Product",
+        "price": 360,
+        "sku": "omega-3",
+        "stock": 0,
+        "category": "Wellness",
+        "packSize": "30 capsules",
+        "imageURL": "",
+        "active": true,
+        "description": "Vegetarian omega-3 style ayurvedic supplement; page highlights immunity, cardiovascular and brain support, with benefits listed for headaches, diabetes, allergies, PMS, and more."
+    },
+    {
+        "title": "Franch Orthovin Thailam 60 ML - Ayurvedic Product",
+        "price": 180,
+        "sku": "OW-60",
+        "stock": 0,
+        "category": "Wellness",
+        "packSize": "60 ml",
+        "imageURL": "",
+        "active": true,
+        "description": "Ayurvedic massage oil for muscular and joint pain; page lists arthritis-related relief (back, knee, neck, shoulder, wrist)."
+    },
+    {
+        "title": "Franch Ayurveda Clear Skin Soap 100 Gms",
+        "price": 60,
+        "sku": "SCC-100",
+        "stock": 0,
+        "category": "Soaps",
+        "packSize": "100 g",
+        "imageURL": "",
+        "active": true,
+        "description": "Herbal clear-skin soap; page highlights glowing skin, natural moisturization, dark spot reduction, and pimple protection."
+    }
+]

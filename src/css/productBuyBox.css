@@ -1,0 +1,614 @@
+/* PDP buy box — conversion-focused */
+.product-buy-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.product-buy-box__brand {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--p-c);
+  margin-bottom: 0.5rem;
+}
+
+.product-buy-box__title {
+  font-size: clamp(1.45rem, 4vw, 1.85rem);
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.2;
+}
+
+.product-buy-box__subtitle {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+.product-buy-box__rating-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.5rem;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+}
+
+.product-buy-box__stars {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-radius: 6px;
+  padding: 2px 8px;
+}
+
+.product-buy-box__review-link {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--p-c);
+  text-decoration: none;
+}
+
+.product-buy-box__review-link:hover {
+  text-decoration: underline;
+}
+
+.product-buy-box__price-block {
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #f1f5f9;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  background: transparent;
+  box-shadow: none;
+}
+
+.product-buy-box__off-tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--p-c);
+  background: color-mix(in srgb, var(--p-c) 10%, white);
+  padding: 2px 8px;
+  border-radius: 4px;
+  line-height: 1.4;
+}
+
+.product-buy-box__price-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 0.75rem;
+}
+
+.product-buy-box__pack-label {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--p-c);
+  background: color-mix(in srgb, var(--p-c) 10%, white);
+  border: 1px solid color-mix(in srgb, var(--p-c) 25%, transparent);
+  padding: 4px 10px;
+  border-radius: 100px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.product-buy-box__sale {
+  font-size: clamp(1.75rem, 4.5vw, 2rem);
+  font-weight: 700;
+  color: #111827;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.product-buy-box__mrp {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #94a3b8;
+  text-decoration: line-through;
+}
+
+.product-buy-box__savings {
+  margin-top: 0.5rem;
+  font-size: 0.8125rem;
+  color: #166534;
+  font-weight: 500;
+}
+
+.product-buy-box__savings strong {
+  font-weight: 700;
+}
+
+.product-buy-box__price-meta {
+  margin-top: 0.45rem;
+  font-size: 0.8125rem;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+.product-buy-box .product-gift-banner {
+  margin-top: 1rem;
+}
+
+.product-buy-box__perks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.product-buy-box__perk {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 6px;
+  background: #fff5f5;
+  color: #9f1239;
+  border: 1px solid #fecdd3;
+}
+
+.product-buy-box__perk--green {
+  background: color-mix(in srgb, var(--p-c) 8%, white);
+  color: var(--p-c);
+  border-color: color-mix(in srgb, var(--p-c) 20%, transparent);
+}
+
+.product-buy-box__notice {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  font-size: 0.875rem;
+  color: #14532d;
+}
+
+.product-buy-box__notice a {
+  font-weight: 700;
+  color: var(--p-c);
+  text-decoration: none;
+}
+
+.product-buy-box__notice a:hover {
+  text-decoration: underline;
+}
+
+.product-buy-box__actions {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+/* Buy Now pill — shimmer + payment chips (reference) */
+.product-cta-buy {
+  position: relative;
+  width: 100%;
+  min-height: 54px;
+  border: none;
+  border-radius: 100vh;
+  padding: 0;
+  cursor: pointer;
+  overflow: hidden;
+  color: #fff;
+  background: linear-gradient(90deg, var(--p-c) 0%, color-mix(in srgb, var(--p-c) 85%, #0d9488) 100%);
+  box-shadow: 0 6px 20px color-mix(in srgb, var(--p-c) 38%, transparent);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-cta-buy:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 26px color-mix(in srgb, var(--p-c) 45%, transparent);
+}
+
+.product-cta-buy:active {
+  transform: translateY(0);
+}
+
+.product-cta-buy--sm {
+  min-height: 40px;
+}
+
+.product-cta-buy--sm .product-cta-buy__label {
+  font-size: 0.75rem;
+  gap: 0.35rem;
+}
+
+.product-cta-buy--sm .product-cta-buy__bag {
+  width: 0.95rem;
+  height: 0.95rem;
+}
+
+.product-cta-buy--no-icons .product-cta-buy__inner {
+  justify-content: center;
+  padding: 0.5rem 1rem;
+}
+
+.product-cta-buy__shine {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: linear-gradient(105deg,
+      transparent 0%,
+      transparent 38%,
+      rgba(255, 255, 255, 0.12) 44%,
+      rgba(255, 255, 255, 0.45) 50%,
+      rgba(255, 255, 255, 0.12) 56%,
+      transparent 62%,
+      transparent 100%);
+  transform: translateX(-100%);
+  animation: product-cta-shimmer 2.6s ease-in-out infinite;
+}
+
+@keyframes product-cta-shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  40% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .product-cta-buy__shine {
+    animation: none;
+    opacity: 0;
+  }
+}
+
+.product-cta-buy__inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  width: 100%;
+  min-height: inherit;
+  padding: 0.55rem 0.85rem 0.55rem 1.15rem;
+}
+
+.product-cta-buy__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.product-cta-buy__bag {
+  width: 1.15rem;
+  height: 1.15rem;
+  flex-shrink: 0;
+  opacity: 0.95;
+}
+
+.product-buy-box__secondary {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.5rem;
+  align-items: stretch;
+}
+
+.product-buy-box__qty {
+  display: flex;
+  align-items: center;
+  border-radius: 100vh;
+  border: 1px solid #e2e8f0;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.product-buy-box__qty button {
+  width: 2.5rem;
+  height: 44px;
+  border: none;
+  background: transparent;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--p-c);
+  cursor: pointer;
+  line-height: 1;
+}
+
+.product-buy-box__qty button:hover {
+  background: #f0fdf4;
+}
+
+.product-buy-box__qty span {
+  min-width: 2rem;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.product-buy-box__add-cart {
+  min-height: 44px;
+  border-radius: 100vh;
+  border: 2px solid var(--p-c);
+  background: #fff;
+  color: var(--p-c);
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.product-buy-box__add-cart:hover {
+  background: #f0fdf4;
+}
+
+.product-buy-box__wishlist {
+  width: 44px;
+  height: 44px;
+  border-radius: 100vh;
+  border: 1px solid #e2e8f0;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.product-buy-box__wishlist:hover {
+  border-color: var(--p-c);
+}
+
+.product-buy-box .product-trust-bar {
+  margin-top: 1.5rem;
+}
+
+.product-pdp-quick-link {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--p-c);
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 100vh;
+  border: 1px solid color-mix(in srgb, var(--p-c) 25%, transparent);
+  background: #fff;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.product-pdp-quick-link:hover {
+  background: #f0fdf4;
+  border-color: var(--p-c);
+}
+
+.product-pdp-intro {
+  font-family: Poppins, sans-serif;
+}
+
+/* Pack of 2 — full banner */
+.product-pack-offer--full {
+  display: block;
+  margin-top: 1rem;
+  text-decoration: none;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.product-pack-offer--full:hover {
+  opacity: 0.95;
+  transform: translateY(-1px);
+}
+
+.product-pack-offer__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Payment chips */
+.product-payment-icons {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.product-payment-icons__chip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+/* Overlapping row on Buy Now pill */
+.product-payment-icons--cta {
+  padding-right: 0.15rem;
+}
+
+.product-payment-icons--cta .product-payment-icons__chip {
+  width: 2.15rem;
+  height: 2.15rem;
+  margin-left: -0.55rem;
+  border: 2px solid color-mix(in srgb, var(--p-c) 90%, #0f766e);
+}
+
+.product-payment-icons--cta .product-payment-icons__chip:first-child {
+  margin-left: 0;
+}
+
+.product-payment-icons--cta .product-payment-icons__chip img {
+  width: 1.35rem;
+  height: 1.35rem;
+  object-fit: contain;
+}
+
+.product-cta-buy--sm .product-payment-icons--cta .product-payment-icons__chip {
+  width: 1.55rem;
+  height: 1.55rem;
+  margin-left: -0.4rem;
+  border-width: 1.5px;
+}
+
+.product-cta-buy--sm .product-payment-icons--cta .product-payment-icons__chip img {
+  width: 1rem;
+  height: 1rem;
+}
+
+.product-payment-icons--sm .product-payment-icons__chip {
+  width: 1.65rem;
+  height: 1.65rem;
+  gap: 0.35rem;
+}
+
+.product-payment-icons--sm .product-payment-icons__chip img {
+  width: 1.1rem;
+  height: 1.1rem;
+  object-fit: contain;
+}
+
+.product-payment-icons--md .product-payment-icons__chip {
+  width: 2rem;
+  height: 2rem;
+}
+
+.product-payment-icons--md .product-payment-icons__chip img {
+  width: 1.25rem;
+  height: 1.25rem;
+  object-fit: contain;
+}
+
+/* ==========================================================================
+   Special Discount Offer Tagline Banner & Pricing
+   ========================================================================== */
+.product-buy-box__special-offer-banner {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.95rem;
+  margin-top: 1.15rem;
+  margin-bottom: 0.35rem;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #dc2626 0%, #ea580c 40%, #d97706 75%, #ca8a04 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 14px -2px rgba(220, 38, 38, 0.35), 0 2px 6px -1px rgba(234, 88, 12, 0.2);
+  width: max-content;
+  max-width: 100%;
+  position: relative;
+  overflow: hidden;
+  animation: specialOfferPulse 3s ease-in-out infinite;
+}
+
+.product-buy-box__special-offer-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+  transform: skewX(-20deg);
+  animation: specialOfferShine 4s infinite linear;
+}
+
+@keyframes specialOfferShine {
+  0% {
+    left: -100%;
+  }
+
+  30%,
+  100% {
+    left: 200%;
+  }
+}
+
+@keyframes specialOfferPulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 4px 14px -2px rgba(220, 38, 38, 0.35);
+  }
+
+  50% {
+    transform: scale(1.015);
+    box-shadow: 0 6px 18px -2px rgba(220, 38, 38, 0.5);
+  }
+}
+
+.product-buy-box__special-offer-icon {
+  font-size: 1rem;
+  line-height: 1;
+  display: inline-flex;
+}
+
+.product-buy-box__special-offer-text {
+  font-size: 0.825rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  white-space: nowrap;
+}
+
+.product-buy-box__special-offer-badge {
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.95);
+  color: #b91c1c;
+  padding: 2px 7px;
+  border-radius: 9999px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  white-space: nowrap;
+}
+
+.product-buy-box__strike-price {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #94a3b8;
+  text-decoration: line-through;
+  line-height: 1;
+}
+
+.product-buy-box__sale--discount {
+  color: #15803d;
+  font-weight: 800;
+}
+
+.product-buy-box__off-tag--glow {
+  background: linear-gradient(135deg, #ef4444, #f97316);
+  color: #ffffff;
+  font-weight: 700;
+  box-shadow: 0 2px 6px -1px rgba(239, 68, 68, 0.35);
+  padding: 3px 9px;
+  border-radius: 6px;
+}

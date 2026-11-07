@@ -1,0 +1,275 @@
+.banner-video {
+    top: 0;
+    z-index: -1;
+    position: sticky;
+    width: 100%;
+    height: 100vh;
+}
+
+.banner-video::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, var(--banner-overlay-opacity, 0));
+    z-index: 11;
+    pointer-events: none;
+    transition: all .3s;
+}
+
+/* hero section */
+
+.hero-swiper-section-wrapper {
+    background-image: var(--hero-img);
+    background-position: center bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.swiper-slide.swiper-slide-active .slider-group-image {
+    width: 100%;
+    aspect-ratio: 1;
+    background-image: url(/images/hero-section/oil.webp), url(/images/hero-section/leaf.webp);
+    background-position: -500px center, center 500px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: back-ani 1s forwards;
+}
+
+@keyframes back-ani {
+    0% {
+        background-position: -500px center, center 500px;
+    }
+
+    50% {
+        background-position: -500px center, center;
+    }
+
+    100% {
+        background-position: center, center;
+    }
+
+}
+
+.swiper-slide.swiper-slide-active .slider-group-image-4 {
+    width: 100%;
+    aspect-ratio: 1;
+    background-image: url(/images/hero-section/og-2.webp), url(/images/hero-section/og-1.webp);
+    background-position: -700px center, center 500px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: back-ani-4 1s forwards;
+}
+
+@keyframes back-ani-4 {
+    0% {
+        background-position: -700px center, center 500px;
+    }
+
+    50% {
+        background-position: -700px center, center;
+    }
+
+    100% {
+        background-position: center, center;
+    }
+
+}
+
+.swiper-slide.swiper-slide-active .slider-group-image-2 {
+    width: 100%;
+    aspect-ratio: 1;
+    background-image: url(/images/hero-section/soap-2.webp), url(/images/hero-section/soap-1.webp), url(/images/hero-section/soap-plat.webp), url(/images/hero-section/soap-leaf.webp);
+    background-position: 500px center, -500px center, 500px center, center 500px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: back-ani-2 1.5s forwards;
+}
+
+@keyframes back-ani-2 {
+    0% {
+        background-position: 500px center, -500px center, 500px center, center 500px;
+    }
+
+    25% {
+        background-position: 500px center, -500px center, 500px center, center;
+    }
+
+    50% {
+        background-position: 500px center, -500px center, center, center;
+    }
+
+    75% {
+        background-position: 500px center, center, center, center;
+    }
+
+    100% {
+        background-position: center, center, center, center;
+    }
+
+}
+
+
+.swiper-slide.swiper-slide-active .slider-group-image-3 {
+    width: 100%;
+    aspect-ratio: 1;
+    background-image: url(/images/hero-section/thailam-product.webp), url(/images/hero-section/thailam-plat.webp), url(/images/hero-section/thailam-x-ray.webp);
+    background-position: -500px center, 500px center, center 500px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: back-ani-3 1.5s forwards;
+}
+
+@keyframes back-ani-3 {
+    0% {
+        background-position: -500px center, 500px center, center 500px;
+    }
+
+    25% {
+        background-position: -500px center, 500px center, center;
+    }
+
+    50% {
+        background-position: -500px center, center, center;
+    }
+
+    75% {
+        background-position: center, center, center;
+    }
+
+    100% {
+        background-position: center, center, center;
+    }
+
+}
+
+.slider-1-content h2 {
+    opacity: 0;
+}
+
+.slider-1-content p {
+    opacity: 0;
+}
+
+.slider-1-content .slider-1-btn-wrapper {
+    opacity: 0;
+}
+
+.swiper-slide.swiper-slide-active .slider-1-content h2 {
+    line-height: 1.1;
+    text-shadow:
+        2px 2px 4px rgba(0, 0, 0, 0.189),
+        -2px -2px 4px rgba(0, 0, 0, 0.162);
+    opacity: 0;
+    transform: translateY(100px);
+    animation: contentAnimation .6s .5s forwards;
+}
+
+.swiper-slide.swiper-slide-active .slider-1-content p {
+    opacity: 0;
+    transform: translateY(100px);
+    animation: contentAnimation .6s .75s forwards;
+}
+
+.swiper-slide.swiper-slide-active .slider-1-content .slider-1-btn {
+    color: var(--t-c-l);
+    font-weight: bold;
+    letter-spacing: 2px;
+    width: max-content;
+    position: relative;
+    padding: 55px 55px 40px 40px;
+    background-image: url(/images/hero-section/btn-img.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: all 0.4s ease, background-size 0.4s ease, box-shadow 0.4s ease;
+    display: inline-block;
+    left: -10px !important;
+
+}
+
+.swiper-slide.swiper-slide-active .slider-1-content .slider-1-btn-wrapper {
+    opacity: 0;
+    transform: translateY(100px);
+    animation: contentAnimation .6s 1s forwards;
+}
+
+
+.slider-1-content .slider-1-btn:hover {
+    scale: 1.08;
+    background-size: 95%;
+}
+
+
+@keyframes contentAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+#heroSection .swiper-next-prev-wrapper {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-70%);
+    z-index: 99;
+}
+
+#heroSection .swiper-next-prev-wrapper .next-prev {
+    border-radius: 100vh;
+    cursor: pointer;
+    background-color: var(--s-c);
+}
+
+#heroSection .swiper-next-prev-wrapper .next-prev.next {
+    transform: translateX(40%);
+}
+
+#heroSection .swiper-next-prev-wrapper .next-prev.prev {
+    transform: translateX(-40%);
+}
+
+#heroSection .swiper-next-prev-wrapper .next-prev.next .mask-item {
+    transform: translateX(-20%);
+}
+
+#heroSection .swiper-next-prev-wrapper .next-prev.prev .mask-item {
+    transform: translateX(20%);
+}
+
+#heroSection .swiper-pagination {
+    bottom: 40px;
+}
+
+#heroSection .swiper-pagination-bullet {
+    background-color: var(--p-c) !important;
+    opacity: .7 !important;
+}
+
+#heroSection .swiper-pagination-bullet-active {
+    background-color: var(--p-c) !important;
+    opacity: 1 !important;
+    scale: 1.5;
+}
+
+@media (width > 998px) {
+    .hero-swiper-section-wrapper {
+        height: 60vh;
+        min-height: 500px;
+    }
+
+}
+
+@media (width < 998px) {
+    .hero-swiper-section-wrapper {
+        min-height: 80vh;
+    }
+
+}
