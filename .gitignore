@@ -26,6 +26,9 @@ dist-ssr
 # Build dumps and backups
 BUILDED_FRANCHOIL/
 NEWBACKUP/
+.firebase/
+*.zip
+
 
 # Credentials
 franchoil.xml
